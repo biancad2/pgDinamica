@@ -48,13 +48,15 @@ function salvar(){
     var salvo = document.querySelectorAll("input");
     var aux="";
     var p=document.createElement("p");
+    var h2 = document.createElement("h2");
     for(var i=0; i<salvo.length; i++){
         aux=aux + salvo[i].value + "\n";
     }
-     for(var i=0; i<salvo.length; i++){
-        aux=aux + salvo[i].value + "\n";
+    for(var i=0; i<salvo.length; i++){
+        salvo[i].value="";
     }
     var confirmar = confirm(aux+"\nAs informacoes estao corretas? ");
+   
     if(confirmar){
          p.innerHTML=aux;
          document.body.appendChild(p);
