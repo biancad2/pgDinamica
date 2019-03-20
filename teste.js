@@ -51,7 +51,9 @@ function salvar(){
     for(var i=0; i<salvo.length; i++){
         aux=aux + salvo[i].value + "\n";
     }
-    
+     for(var i=0; i<salvo.length; i++){
+        aux=aux + salvo[i].value + "\n";
+    }
     var confirmar = confirm(aux+"\nAs informacoes estao corretas? ");
     if(confirmar){
          p.innerHTML=aux;
