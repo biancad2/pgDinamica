@@ -25,6 +25,7 @@ function criar(){
     document.body.appendChild(cpf);
     document.body.appendChild(celular);
     
+    
     var titNome = document.createElement("label");
     var titEndereco = document.createElement("label");
     var titCpf = document.createElement("label");
@@ -46,15 +47,21 @@ function criar(){
 function salvar(){
     var salvo = document.querySelectorAll("input");
     var aux="";
+    var p=document.createElement("p");
     for(var i=0; i<salvo.length; i++){
         aux=aux + salvo[i].value + "\n";
     }
+    
     var confirmar = confirm(aux+"\nAs informacoes estao corretas? ");
     if(confirmar){
-        window.location.reload()
+         p.innerHTML=aux;
+         document.body.appendChild(p);
+       
     }else{
         alert("Digite as informacoes novamente");
     }
 }
+
+
 
 
