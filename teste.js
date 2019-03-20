@@ -1,17 +1,18 @@
 function criar(){
     var h1 = document.createElement("h1");
     var h2 = document.createElement("h2");
+    
     h1.innerHTML="Formulario";
     h2.innerHTML="Registros";
-    h1.style.background="#8258FA";
-    h1.style.textAlign="Center";
+    
     document.body.appendChild(h1);
     var nome = document.createElement("input");
     var endereco = document.createElement("input");
     var cpf = document.createElement("input");
     var celular = document.createElement("input");
    
-    
+    h1.style.background="#8258FA";
+    h1.style.textAlign="Center";
     nome.style.width="40%";
     nome.style.marginRight="8%";
     endereco.style.width="40%";
@@ -53,14 +54,15 @@ function salvar(){
     var salvo = document.querySelectorAll("input");
     var aux="";
     var p=document.createElement("p");
-    
 
     for(var i=0; i<salvo.length; i++){
         aux=aux + salvo[i].value + "\n";
     }
+    
     for(var i=0; i<salvo.length; i++){
         salvo[i].value="";
     }
+    
     var confirmar = confirm(aux+"\nAs informacoes estao corretas? ");
    
     if(confirmar){
