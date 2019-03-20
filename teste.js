@@ -1,9 +1,11 @@
 function criar(){
-    var p = document.createElement("p");
-    p.innerHTML="Formulario";
-    p.style.background="#8258FA";
-    p.style.textAlign="Center";
-    document.body.appendChild(p);
+    var h1 = document.createElement("h1");
+    var h2 = document.createElement("h2");
+    h1.innerHTML="Formulario";
+    h2.innerHTML="Registros";
+    h1.style.background="#8258FA";
+    h1.style.textAlign="Center";
+    document.body.appendChild(h1);
     var nome = document.createElement("input");
     var endereco = document.createElement("input");
     var cpf = document.createElement("input");
@@ -31,6 +33,7 @@ function criar(){
     var titCpf = document.createElement("label");
     var titCelular = document.createElement("label");
     
+    
     titNome.innerHTML="Nome: ";
     titEndereco.innerHTML="Endereco: ";
     titCpf.innerHTML="CPF: ";
@@ -40,15 +43,18 @@ function criar(){
     document.body.insertBefore(titEndereco,endereco);
     document.body.insertBefore(titCpf,cpf);
     document.body.insertBefore(titCelular,celular);
+    document.body.appendChild(h2);
     
     document.querySelector("#criar").style.display="none";
+   
 }
 
 function salvar(){
     var salvo = document.querySelectorAll("input");
     var aux="";
     var p=document.createElement("p");
-    var h2 = document.createElement("h2");
+    
+
     for(var i=0; i<salvo.length; i++){
         aux=aux + salvo[i].value + "\n";
     }
